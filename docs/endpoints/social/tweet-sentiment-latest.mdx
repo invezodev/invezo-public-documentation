@@ -1,0 +1,42 @@
+---
+title: "Tweet Sentiment (Latest)"
+description:
+  "Tweet sentiment measures positive, negative, and neutral sentiment for tweets
+  that mention an asset."
+api: "GET https://api.invezo.com/v1/social/twitter/sentiment/latest"
+---
+
+### Query Parameters
+
+<ParamField query="symbol" type="string" required>
+  asset symbol (example: btc)
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "symbol": "BTC",
+            "positive": 0.08,
+            "negative": 0.037,
+            "neutral": 0.883,
+            "tweets_analyzed": 7721
+        },
+        {
+            "symbol": "ETH",
+            "positive": 0.087,
+            "negative": 0.032,
+            "neutral": 0.881,
+            "tweets_analyzed": 8604
+        },
+        ...
+    ]
+}
+```
+
+</ResponseExample>

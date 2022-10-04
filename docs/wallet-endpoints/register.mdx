@@ -1,0 +1,29 @@
+---
+title: "Register Wallet"
+description:
+  "Register a wallet address to begin tracking it. For bulk wallet address
+  registration, please email support@invezo.com or message us on Slack."
+api: "POST https://api.invezo.com/v1/wallets/tracking/register"
+---
+
+### JSON Body Parameters
+
+<ParamField query="address" type="string">
+  wallet address
+</ParamField>
+
+<ParamField query="chain" type="string">
+  blockchain (example: sol)
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "data": "Successfully registered wallet. Please allow for up to a minute to synchronize transactions."
+}
+```
+
+</ResponseExample>

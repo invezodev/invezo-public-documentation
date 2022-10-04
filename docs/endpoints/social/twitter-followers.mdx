@@ -1,0 +1,61 @@
+---
+title: "Twitter Follers"
+description:
+  "Twitter users follow to accounts in order to add that users' posts to their
+  home page. That accounts' updates will appear in a user's Home timeline.
+  Measuring followers over time is a good way to measure general interest for an
+  account over time."
+api: "GET https://api.invezo.com/v1/social/twitter/followers"
+---
+
+### Query Parameters
+
+<ParamField query="symbol" type="string" required>
+  asset symbol (example: btc)
+</ParamField>
+
+<ParamField query="min" type="int" required>
+  start of the aggregate time window as a timestamp (example: 1168300800)
+</ParamField>
+
+<ParamField query="max" type="int" required>
+  end of the aggregate time window as a timestamp (example: 1652486400)
+</ParamField>
+
+<ParamField query="interval" type="string" required>
+  size of the time window (valid intervals: 5m, 1h, 1d, 1w, 1mo)
+</ParamField>
+
+<ParamField query="sort" type="string">
+  sort the results by timestamp. asc will return results in ascending order
+  (oldest to newest), desc will return results in descending order (newest to
+  oldest). default value is asc
+</ParamField>
+
+<ParamField query="limit" type="int">
+  limit the number of results returned, default is 5000 and max is 50000
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "symbol": "BTC",
+    "result_count": 5000,
+    "data": [
+        {
+            "t": 1646006400,
+            "v": 4775258
+        },
+        {
+            "t": 1646092800,
+            "v": 4783167
+        },
+        ...
+    ]
+}
+```
+
+</ResponseExample>

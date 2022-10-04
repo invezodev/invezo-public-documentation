@@ -1,0 +1,24 @@
+---
+title: "Block Height (Latest)"
+description: "The number of blocks in the blockchain minus one."
+api: "GET https://api.invezo.com/v1/blockchain/block_height/latest"
+---
+
+### Query Parameters
+
+<ParamField query="symbol" type="string" required>
+  asset symbol (example: btc)
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "symbol": "BTC",
+    "latest": 746808
+}
+```
+
+</ResponseExample>
