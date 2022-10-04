@@ -1,0 +1,55 @@
+---
+title: "API Key"
+---
+
+## Usage
+
+Pass your API key with the `apikey` parameter in the query string as follows:
+
+```
+https://api.invezo.com/v1/assets?apikey={API_KEY}
+```
+
+Alternatively, you can add the `x-invezo-api-key` header to the request, using
+your API key as the value as follows:
+
+```
+x-invezo-api-key: {API_KEY}
+```
+
+## Example using...
+
+### cURL
+
+```bash
+export API_KEY=YOUR-KEY
+# using apikey in query string
+curl "https://api.invezo.com/v1/assets?apikey=$API_KEY"
+
+# using x-invezo-api-key in headers
+curl -H "x-invezo-api-key:${API_KEY}" "https://api.invezo.com/v1/assets"
+```
+
+### HTTP
+
+```bash
+export API_KEY=YOUR-KEY
+# using apikey in query string
+http "https://api.invezo.com/v1/assets" apikey==$API_KEY
+
+# using x-invezo-api-key in headers
+http "https://api.invezo.com/v1/assets" "x-invezo-api-key:${API_KEY}"
+```
+
+### Python
+
+```python
+import requests
+
+# your API key goes here
+API_KEY = ""
+
+# make API request
+res = requests.get('https://api.invezo.com/v1/assets',
+	params={'apikey': API_KEY})
+```

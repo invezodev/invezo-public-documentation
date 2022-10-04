@@ -1,0 +1,56 @@
+---
+title: "Social Stats"
+description: "Overall social statistics for a list of assets."
+api: "GET https://api.invezo.com/v1/social/stats"
+---
+
+### Query Parameters
+
+<ParamField query="symbols" type="string" required>
+  comma separated list of asset symbols (example: btc,eth)
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "symbol": "BTC",
+            "twitterFollowers": 5421666,
+            "twitterFollowersTwentyFourHourChange": 2446,
+            "twitterFollowersTwentyFourHourPercentChange": 0.00045135646827403205,
+            "twitterVolume": 200197,
+            "twitterVolumeTwentyFourHourChange": -27330,
+            "twitterVolumeTwentyFourHourPercentChange": -0.12011761241522984,
+            "redditSubscribers": 4432613,
+            "redditSubscribersTwentyFourHourChange": 2925,
+            "redditSubscribersTwentyFourHourPercentChange": 0.0006603173857842809,
+            "redditVolume": 1021,
+            "redditVolumeTwentyFourHourChange": -468,
+            "redditVolumeTwentyFourHourPercentChange": -0.3143049026192075
+        },
+        {
+            "symbol": "ETH",
+            "twitterFollowers": 2710491,
+            "twitterFollowersTwentyFourHourChange": 2544,
+            "twitterFollowersTwentyFourHourPercentChange": 0.0009394570868632215,
+            "twitterVolume": 124317,
+            "twitterVolumeTwentyFourHourChange": -33922,
+            "twitterVolumeTwentyFourHourPercentChange": -0.21437193106629845,
+            "redditSubscribers": 1358343,
+            "redditSubscribersTwentyFourHourChange": 1270,
+            "redditSubscribersTwentyFourHourPercentChange": 0.000935837644695606,
+            "redditVolume": 557,
+            "redditVolumeTwentyFourHourChange": -551,
+            "redditVolumeTwentyFourHourPercentChange": -0.4972924187725632
+        },
+        ...
+    ]
+}
+```
+
+</ResponseExample>
