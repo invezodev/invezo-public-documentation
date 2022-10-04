@@ -1,0 +1,26 @@
+---
+title: "Asset List"
+description: "Get list all assets supported by the Invezo API."
+api: "GET https://api.invezo.com/v1/assets"
+---
+
+<ResponseExample>
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "symbol": "AAVE",
+            "name": "Aave"
+        },
+        {
+            "symbol": "ADA",
+            "name": "Cardano"
+        },
+        ...
+    ]
+}
+```
+</ResponseExample>

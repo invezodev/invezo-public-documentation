@@ -1,0 +1,49 @@
+---
+title: "Quote"
+description: "Current close price and 24h change for a list of tickers."
+api: "GET https://api.invezo.com/v1/market/quote"
+---
+
+### Query Parameters
+
+<ParamField query="pairs" type="string" required>
+  comma separated list of asset symbols with base currency (example:
+  btc-usd,eth-usd)
+</ParamField>
+
+<ParamField query="exchange" type="string">
+  specifies exchange to query. default is all (example: binance)
+</ParamField>
+
+<ResponseExample>
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "pair": "ETH-USD",
+            "price": 1515.731857527151,
+            "twentyFourHourChange": 138.6008552772098,
+            "twentyFourHourChangePercent": 0.10064464096063866,
+            "twentyFourHourHigh": 1515.731857527151,
+            "twentyFourHourLow": 1360.0524677726162,
+            "fiftyTwoWeekHigh": 4863.21184,
+            "fiftyTwoWeekLow": 889.3338688659904
+        },
+        {
+            "pair": "BTC-USD",
+            "price": 21676.566847513674,
+            "twentyFourHourChange": 786.6459705175039,
+            "twentyFourHourChangePercent": 0.03765672331405299,
+            "twentyFourHourHigh": 21676.566847513674,
+            "twentyFourHourLow": 20820.96066107689,
+            "fiftyTwoWeekHigh": 68730.90772,
+            "fiftyTwoWeekLow": 17638.72325250658
+        },
+        ...
+    ]
+}
+```
+</ResponseExample>

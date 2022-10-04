@@ -1,0 +1,25 @@
+---
+title: "Mining Difficulty (Latest)"
+description:
+  "The estimated number of hashes required to mine an additional block."
+api: "GET https://api.invezo.com/v1/mining/difficulty/latest"
+---
+
+### Query Parameters
+
+<ParamField query="symbol" type="string" required>
+  asset symbol (example: btc)
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "symbol": "BTC",
+    "latest": 1.1893867372716571e+23
+}
+```
+
+</ResponseExample>

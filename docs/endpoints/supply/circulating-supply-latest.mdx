@@ -1,0 +1,26 @@
+---
+title: "Circulating Supply (Latest)"
+description:
+  "The number of tokens that are publicly available and circulating in the
+  market."
+api: "GET https://api.invezo.com/v1/supply/current/latest"
+---
+
+### Query Parameters
+
+<ParamField query="symbol" type="string" required>
+  asset symbol (example: btc)
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "symbol": "BTC",
+    "latest": 19105168.75
+}
+```
+
+</ResponseExample>

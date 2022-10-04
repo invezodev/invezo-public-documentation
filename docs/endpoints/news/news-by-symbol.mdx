@@ -1,0 +1,57 @@
+---
+title: "News by Symbol"
+description: "Top news for a specific symbol or symbols."
+api: "GET https://api.invezo.com/v1/news"
+---
+
+### Query Parameters
+
+<ParamField query="symbols" type="string" required>
+  comma separated list of asset symbols (example: btc,eth)
+</ParamField>
+
+<ParamField query="limit" type="int">
+  limit the number of results returned
+</ParamField>
+
+<ParamField query="offset" type="int">
+  offset the returned results
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "time": 1658940945,
+            "title": "Here's What's Next for Bitcoin and Ethereum (ETH) After Failed BTC Breakout, According to Top Crypto Analyst",
+            "url": "https://dailyhodl.com/2022/07/27/heres-whats-next-for-bitcoin-and-ethereum-eth-after-failed-btc-breakout-according-to-top-crypto-analyst/",
+            "source": "The Daily Hodl",
+            "symbols": [
+                "btc",
+                "eth"
+            ],
+            "topics": []
+        },
+        {
+            "time": 1658937742,
+            "title": "Bitcoin Price Analysis: BTC Retest Support Zone; Will Hit $24,000 Next?",
+            "url": "https://coingape.com/?p=118178",
+            "source": "Coingape",
+            "symbols": [
+                "btc"
+            ],
+            "topics": [
+                "tanalysis"
+            ]
+        },
+        ...
+    ]
+}
+```
+
+</ResponseExample>

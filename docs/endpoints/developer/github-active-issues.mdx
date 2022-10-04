@@ -1,0 +1,62 @@
+---
+title: "GitHub Active Issues"
+description:
+  "Issues are a bug tracking system built into Github. They provide a way for
+  people to report problems, receive feedback, and collaborate together on code
+  projects. Active issues shows issues that are not closed."
+api: "GET https://api.invezo.com/v1/developer/github/issues/active"
+---
+
+### Query Parameters
+
+<ParamField query="symbol" type="string" required>
+  asset symbol (example: btc)
+</ParamField>
+
+<ParamField query="pair" type="string" required>
+  asset symbol with base currency (example: btc-usd)
+</ParamField>
+
+<ParamField query="min" type="int" required>
+  start of the aggregate time window as a timestamp (example: 1168300800)
+</ParamField>
+
+<ParamField query="max" type="int" required>
+  end of the aggregate time window as a timestamp (example: 1652486400)
+</ParamField>
+
+<ParamField query="interval" type="string" required>
+  size of the time window (valid intervals: 5m, 1h, 1d, 1w, 1mo)
+</ParamField>
+
+<ParamField query="sort" type="string">
+  sort the results by timestamp. asc will return results in ascending order
+  (oldest to newest), desc will return results in descending order (newest to
+  oldest). default value is asc
+</ParamField>
+
+<ParamField query="limit" type="int">
+  limit the number of results returned, default is 5000 and max is 50000
+</ParamField>
+
+<ResponseExample>
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "symbol": "BTC",
+    "result_count": 5000,
+    "data": [
+        {
+            "t": 1608940800,
+            "v": 594
+        },
+        {
+            "t": 1609027200,
+            "v": 594
+        },
+        ...
+    ]
+}
+```
+</ResponseExample>

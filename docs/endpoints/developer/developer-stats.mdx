@@ -1,0 +1,42 @@
+---
+title: "Developer Stats"
+description: "The most recent developer stats for a given asset."
+api: "GET https://api.invezo.com/v1/developer/stats"
+---
+
+### Query Parameters
+
+<ParamField query="symbols" type="string" required>
+  comma separated list of asset symbols (example: btc,eth)
+</ParamField>
+
+<ResponseExample>
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "symbol": "ETH",
+            "githubCommits": 13526,
+            "githubForks": 13491,
+            "githubIssues": 14193,
+            "githubActiveIssues": 247,
+            "githubStars": 38548,
+            "githubWatchers": 2168
+        },
+        {
+            "symbol": "BTC",
+            "githubCommits": 34854,
+            "githubForks": 23770,
+            "githubIssues": 24771,
+            "githubActiveIssues": 598,
+            "githubStars": 65442,
+            "githubWatchers": 3921
+        },
+        ...
+    ]
+}
+```
+</ResponseExample>
