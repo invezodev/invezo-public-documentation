@@ -12,8 +12,8 @@
       "ultraLight": "#F5F6F8",
       "ultraDark": "#175695",
       "background": {
-        "light": "#17181c",
-        "dark": "#f7f8fb"
+        "light": "f7f8fb",
+        "dark": "#17181c"
       }
     },
     "api": {
