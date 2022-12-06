@@ -104,20 +104,6 @@
               "endpoints/social/tweet-sentiment",
               "endpoints/social/tweet-sentiment-latest"
             ]
-          },
-          {
-            "group": "Derivatives",
-            "pages": [
-              "endpoints/derivatives/open-interest",
-              "endpoints/derivatives/funding-rate"
-            ]
-          },
-          {
-            "group": "Trades",
-            "pages": [
-              "endpoints/trades/buys-above",
-              "endpoints/trades/sells-above"
-            ]
           }
         ]
       },
