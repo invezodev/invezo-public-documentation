@@ -10,7 +10,11 @@
       "light": "#5DA5E1",
       "dark": "#306AA5",
       "ultraLight": "#F5F6F8",
-      "ultraDark": "#175695"
+      "ultraDark": "#175695",
+      "background": {
+        "light": "#17181c",
+        "dark": "#f7f8fb"
+      }
     },
     "api": {
       "auth": {
