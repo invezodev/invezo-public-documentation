@@ -4,7 +4,7 @@
         "light": "/images/invezo-logo.png",
         "dark": "/images/logo-dark.png"
     },
-    "backgroundImage": "/images/background.png",
+    "backgroundImage": "/images/background-1.png",
     "favicon": "/favicon.svg",
     "colors": {
         "primary": "#0d7bff",
