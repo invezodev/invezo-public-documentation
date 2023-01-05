@@ -18,6 +18,7 @@
       }
     },
     "api": {
+        "baseUrl": "https://api.invezo.com/v1",
       "auth": {
         "method": "key",
         "name": "x-invezo-api-key"
