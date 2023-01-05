@@ -4,6 +4,7 @@
       "light": "/images/invezo-logo.png",
       "dark": "/images/logo-dark.png"
     },
+    "backgroundImage": "/images/background.png",
     "favicon": "/favicon.svg",
     "colors": {
       "primary": "#0d7bff",
@@ -12,7 +13,7 @@
       "ultraLight": "#F5F6F8",
       "ultraDark": "#175695",
       "background": {
-        "light": "f7f8fb",
+        "light": "#f7f8fb",
         "dark": "#17181c"
       }
     },
@@ -25,8 +26,8 @@
     "topbarLinks": [
     ],
     "topbarCtaButton": {
-      "name": "Book a Demo",
-      "url": "https://www.invezo.com/"
+      "name": "Open App",
+      "url": "https://alpha.invezo.com/"
     },
     "anchors": [
       {
@@ -123,7 +124,6 @@
     ],
     "footerSocials": {
       "twitter": "https://twitter.com/invezo_com",
-      "telegram": "https://t.me/invezo_com",
       "slack": "https://invezo-community.slack.com/join/shared_invite/zt-1ban1w2s2-zTzVI~diBTui9PlT~o02vw#/shared-invite/email"
     }
   }
