@@ -8,3 +8,123 @@ api: "GET https://api.invezo.com/v1/assets/metadata"
 <ParamField query="symbols" type="string" required>
   Comma separated list of asset symbols (example: btc,eth).
 </ParamField>
+
+<ResponseExample>
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "symbol": "BTC",
+            "name": "Bitcoin",
+            "description": "Decentralized peer-to-peer transactions",
+            "images": {
+                "small": "https://cdn.invezo.com/assets/small/btc.png",
+                "medium": "https://cdn.invezo.com/assets/medium/btc.png",
+                "large": "https://cdn.invezo.com/assets/large/btc.png"
+            },
+            "links": [
+                {
+                    "name": "Reddit",
+                    "url": "https://www.reddit.com/r/Bitcoin/",
+                    "type": "Community"
+                },
+                {
+                    "name": "Twitter",
+                    "url": "https://twitter.com/bitcoin",
+                    "type": "Community"
+                },
+                {
+                    "name": "Facebook",
+                    "url": "https://www.facebook.com/bitcoins",
+                    "type": "Community"
+                },
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/bitcoin/bitcoin",
+                    "type": "Developer"
+                },
+                {
+                    "name": "Blockchair",
+                    "url": "https://blockchair.com/bitcoin/",
+                    "type": "Explorer"
+                },
+                {
+                    "name": "BTC.com",
+                    "url": "https://btc.com/",
+                    "type": "Explorer"
+                },
+                {
+                    "name": "TokenView",
+                    "url": "https://btc.tokenview.com/",
+                    "type": "Explorer"
+                }
+            ],
+            "categories": [
+                "Top Assets"
+            ],
+            "platform": "native"
+        },
+        {
+            "symbol": "ETH",
+            "name": "Ethereum",
+            "description": "Open blockchain for building decentralized applications",
+            "images": {
+                "small": "https://cdn.invezo.com/assets/small/eth.png",
+                "medium": "https://cdn.invezo.com/assets/medium/eth.png",
+                "large": "https://cdn.invezo.com/assets/large/eth.png"
+            },
+            "links": [
+                {
+                    "name": "Reddit",
+                    "url": "https://www.reddit.com/r/ethereum",
+                    "type": "Community"
+                },
+                {
+                    "name": "Twitter",
+                    "url": "https://twitter.com/ethereum",
+                    "type": "Community"
+                },
+                {
+                    "name": "Facebook",
+                    "url": "https://www.facebook.com/ethereumproject",
+                    "type": "Community"
+                },
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/ethereum/go-ethereum",
+                    "type": "Developer"
+                },
+                {
+                    "name": "Etherscan",
+                    "url": "https://etherscan.io/",
+                    "type": "Explorer"
+                },
+                {
+                    "name": "Ethplorer",
+                    "url": "https://ethplorer.io/",
+                    "type": "Explorer"
+                },
+                {
+                    "name": "Blockchair",
+                    "url": "https://blockchair.com/ethereum",
+                    "type": "Explorer"
+                },
+                {
+                    "name": "TokenView",
+                    "url": "https://eth.tokenview.com/",
+                    "type": "Explorer"
+                }
+            ],
+            "categories": [
+                "Top Assets"
+            ],
+            "platform": "native"
+        },
+        ...
+    ]
+}
+```
+</ResponseExample>
