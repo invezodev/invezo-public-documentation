@@ -1,0 +1,16 @@
+---
+title: "Outflows"
+description: "Daily outflows from centralized exchanges (USD/USDC/DAI)"
+api: "GET https://api.invezo.com/v1/exchanges/outflows"
+---
+    
+### Query Parameters
+        
+<ParamField query="min" type="int" required>
+    start of the aggregate time window as a timestamp (example: 1168300800)
+</ParamField>
+            
+<ParamField query="max" type="int" required>
+    end of the aggregate time window as a timestamp (example: 1168300800)
+</ParamField>
+            

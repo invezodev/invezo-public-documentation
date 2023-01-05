@@ -1,0 +1,23 @@
+---
+title: "Code Additions"
+description: "Weekly code additions is the number of lines of code added to the public repository"
+api: "GET https://api.invezo.com/v1/developer/code-additions"
+---
+
+### Query Parameters
+
+<ParamField query="asset" type="string" >
+    Comma separated list of asset codes (example: bitcoin,ethereum)
+</ParamField>
+
+<ParamField query="min" type="int" required>
+    start of the aggregate time window as a timestamp (example: 1168300800)
+</ParamField>
+
+<ParamField query="max" type="int" required>
+    end of the aggregate time window as a timestamp (example: 1168300800)
+</ParamField>
+
+<ParamField query="interval" type="string" required>
+    size of the time window (valid intervals: 5m, 1h, 1d, 1w, 1mo)
+</ParamField>

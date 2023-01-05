@@ -1,131 +1,183 @@
 {
     "name": "Invezo",
     "logo": {
-      "light": "/images/invezo-logo.png",
-      "dark": "/images/logo-dark.png"
+        "light": "/images/invezo-logo.png",
+        "dark": "/images/logo-dark.png"
     },
     "backgroundImage": "/images/background.png",
     "favicon": "/favicon.svg",
     "colors": {
-      "primary": "#0d7bff",
-      "light": "#0d7bff",
-      "dark": "#2f67e3",
-      "ultraLight": "#F5F6F8",
-      "ultraDark": "#175695",
-      "background": {
-        "light": "#f7f8fb",
-        "dark": "#17181c"
-      }
+        "primary": "#0d7bff",
+        "light": "#0d7bff",
+        "dark": "#2f67e3",
+        "ultraLight": "#F5F6F8",
+        "ultraDark": "#175695",
+        "background": {
+            "light": "#f7f8fb",
+            "dark": "#17181c"
+        }
     },
     "api": {
         "baseUrl": "https://api.invezo.com/v1",
-      "auth": {
-        "method": "key",
-        "name": "x-invezo-api-key"
-      }
+        "auth": {
+            "method": "key",
+            "name": "x-invezo-api-key"
+        }
     },
-    "topbarLinks": [
-    ],
+    "topbarLinks": [],
     "topbarCtaButton": {
-      "name": "Open App",
-      "url": "https://alpha.invezo.com/"
+        "name": "Open App",
+        "url": "https://alpha.invezo.com/"
     },
     "anchors": [
-      {
-        "name": "Community",
-        "icon": "slack",
-        "url": "https://invezo-community.slack.com/join/shared_invite/zt-1ban1w2s2-zTzVI~diBTui9PlT~o02vw#/shared-invite/email"
-      },
-      {
-        "name": "Contact",
-        "icon": "envelope",
-        "url": "https://app.invezo.com/contact"
-      }
+        {
+            "name": "Community",
+            "icon": "slack",
+            "url": "https://invezo-community.slack.com/join/shared_invite/zt-1ban1w2s2-zTzVI~diBTui9PlT~o02vw#/shared-invite/email"
+        },
+        {
+            "name": "Contact",
+            "icon": "envelope",
+            "url": "https://app.invezo.com/contact"
+        }
     ],
     "navigation": [
-      {
-        "group": "Welcome",
-        "pages": ["introduction", "supported-exchanges"]
-      },
-      {
-        "group": "API",
-        "pages": ["api-reference/authentication", "api-reference/api-key"]
-      },
-      {
-        "group": "Reference",
-        "pages": ["asset-reference/asset-lists", "asset-reference/asset-metadata"]
-      },
-      {
-        "group": "Analytics Endpoints",
-        "pages": [
-          {
-            "group": "Market",
+        {
+            "group": "Welcome",
             "pages": [
-              "endpoints/market/quote",
-              "endpoints/market/closes",
-              "endpoints/market/ohlc",
-              "endpoints/market/exchange-volume"
+                "introduction",
+                "supported-exchanges"
             ]
-          },
-          {
-            "group": "Developer",
+        },
+        {
+            "group": "API",
             "pages": [
-              "endpoints/developer/developer-stats",
-              "endpoints/developer/github-stars",
-              "endpoints/developer/new-github-stars",
-              "endpoints/developer/github-watchers",
-              "endpoints/developer/new-github-watchers",
-              "endpoints/developer/github-forks",
-              "endpoints/developer/new-github-forks",
-              "endpoints/developer/github-pull-requests",
-              "endpoints/developer/new-github-pull-requests",
-              "endpoints/developer/github-total-issues",
-              "endpoints/developer/github-total-issue-change",
-              "endpoints/developer/github-active-issues",
-              "endpoints/developer/github-new-issues",
-              "endpoints/developer/github-commits",
-              "endpoints/developer/github-new-github-commits"
+                "api-reference/authentication",
+                "api-reference/api-key"
             ]
-          },
-          {
-            "group": "News",
+        },
+        {
+            "group": "Reference",
             "pages": [
-              "endpoints/news/general-news",
-              "endpoints/news/news-by-symbol"
+                "asset-reference/asset-lists",
+                "asset-reference/asset-metadata"
             ]
-          },
-          {
-            "group": "Social",
+        },
+        {
+            "group": "Analytics Endpoints",
             "pages": [
-              "endpoints/social/social-stats",
-              "endpoints/social/reddit-subscribers",
-              "endpoints/social/reddit-subscriber-change",
-              "endpoints/social/twitter-followers",
-              "endpoints/social/twitter-follower-change",
-              "endpoints/social/mention-summary",
-              "endpoints/social/tweet-volume",
-              "endpoints/social/original-tweet-volume",
-              "endpoints/social/retweet-volume",
-              "endpoints/social/verified-tweet-volume",
-              "endpoints/social/tweet-sentiment",
-              "endpoints/social/tweet-sentiment-latest"
+                {
+                    "group": "Market",
+                    "pages": [
+                        "endpoints/market/quote",
+                        "endpoints/market/closes",
+                        "endpoints/market/ohlc",
+                        "endpoints/market/exchange-volume"
+                    ]
+                },
+                {
+                    "group": "Developer",
+                    "pages": [
+                        "endpoints/developer/active",
+                        "endpoints/developer/code-additions",
+                        "endpoints/developer/asset-communities",
+                        "endpoints/developer/migrations",
+                        "endpoints/developer/migration-assets",
+                        "endpoints/developer/top-repositories",
+                        "endpoints/developer/new-repositories",
+                        "endpoints/developer/top-authors",
+                        "endpoints/developer/author-stats",
+                        "endpoints/developer/developer-stats",
+                        "endpoints/developer/github-stars",
+                        "endpoints/developer/new-github-stars",
+                        "endpoints/developer/github-watchers",
+                        "endpoints/developer/new-github-watchers",
+                        "endpoints/developer/github-forks",
+                        "endpoints/developer/new-github-forks",
+                        "endpoints/developer/github-pull-requests",
+                        "endpoints/developer/new-github-pull-requests",
+                        "endpoints/developer/github-total-issues",
+                        "endpoints/developer/github-total-issue-change",
+                        "endpoints/developer/github-active-issues",
+                        "endpoints/developer/github-new-issues",
+                        "endpoints/developer/github-commits",
+                        "endpoints/developer/github-new-github-commits"
+                    ]
+                },
+                {
+                    "group": "Venture",
+                    "pages": [
+                        "endpoints/venture/top-companies",
+                        "endpoints/venture/deal-stats",
+                        "endpoints/venture/firm-stats",
+                        "endpoints/venture/recent-rounds",
+                        "endpoints/venture/funding-news",
+                        "endpoints/venture/investor-geography"
+                    ]
+                },
+                {
+                    "group": "Stablecoins",
+                    "pages": [
+                        "endpoints/stablecoins/market-share",
+                        "endpoints/stablecoins/user-share",
+                        "endpoints/stablecoins/supply",
+                        "endpoints/stablecoins/stats",
+                        "endpoints/stablecoins/uniswap-v3-volume",
+                        "endpoints/stablecoins/exchange-stats"                 
+                    ]
+                },
+                {
+                    "group": "Exchange",
+                    "pages": [
+                        "endpoints/exchanges/net-flows",
+                        "endpoints/exchanges/inflows",
+                        "endpoints/exchanges/outflows",
+                        "endpoints/exchanges/token-flows",
+                        "endpoints/exchanges/deposits",
+                        "endpoints/exchanges/withdrawals",
+                        "endpoints/exchanges/proof-of-reserves",
+                        "endpoints/exchanges/dex-volume"
+                    ]
+                },
+                {
+                    "group": "Social",
+                    "pages": [
+                        "endpoints/social/social-stats",
+                        "endpoints/social/reddit-subscribers",
+                        "endpoints/social/reddit-subscriber-change",
+                        "endpoints/social/twitter-followers",
+                        "endpoints/social/twitter-follower-change",
+                        "endpoints/social/mention-summary",
+                        "endpoints/social/tweet-volume",
+                        "endpoints/social/original-tweet-volume",
+                        "endpoints/social/retweet-volume",
+                        "endpoints/social/verified-tweet-volume",
+                        "endpoints/social/tweet-sentiment",
+                        "endpoints/social/tweet-sentiment-latest"
+                    ]
+                },
+                {
+                    "group": "News",
+                    "pages": [
+                        "endpoints/news/general-news",
+                        "endpoints/news/news-by-symbol",
+                        "endpoints/venture/funding-news"
+                    ]
+                }
             ]
-          }
-        ]
-      },
-      {
-        "group": "Wallet Endpoints",
-        "pages": [
-          "wallet-endpoints/holdings",
-          "wallet-endpoints/balance-over-time",
-          "wallet-endpoints/register",
-          "wallet-endpoints/delete"
-        ]
-      }
+        },
+        {
+            "group": "Wallet Endpoints",
+            "pages": [
+                "wallet-endpoints/holdings",
+                "wallet-endpoints/balance-over-time",
+                "wallet-endpoints/register",
+                "wallet-endpoints/delete"
+            ]
+        }
     ],
     "footerSocials": {
-      "twitter": "https://twitter.com/invezo_com",
-      "slack": "https://invezo-community.slack.com/join/shared_invite/zt-1ban1w2s2-zTzVI~diBTui9PlT~o02vw#/shared-invite/email"
+        "twitter": "https://twitter.com/invezo_com",
+        "slack": "https://invezo-community.slack.com/join/shared_invite/zt-1ban1w2s2-zTzVI~diBTui9PlT~o02vw#/shared-invite/email"
     }
-  }
-  
+}
