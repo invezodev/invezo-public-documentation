@@ -1,8 +1,8 @@
 ---
-title: "Transactions"
+title: "Profit Loss"
 description:
-  "Get all transactions with purchase price for a wallet on a given chain." 
-api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
+  "Get approximate P&L in USD of a wallet address over a specified time period based on balance. An empty token parameter will give an aggregate P&L over time in USD for all tokens."
+api: "GET https://api.invezo.com/v1/wallets/tracking/balance"
 ---
 
 ### Query Parameters
@@ -15,11 +15,11 @@ api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
   start of the aggregate time window as a timestamp (example: 1652486400 or '2022-05-13T18:00:00')
 </ParamField>
 
-<ParamField query="max" type="int or string" optional>
+<ParamField query="max" type="int or string" required>
   end of the aggregate time window as a timestamp (example: 1675191600 or '2023-01-31T12:00:00')
 </ParamField>
 
-<ParamField query="interval" type="string" optional>
+<ParamField query="interval" type="string" required>
   size of the time window (valid intervals: 10m, 1h, 1d, 1w, 1mo)
 </ParamField>
 
@@ -30,7 +30,7 @@ api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
 <ParamField query="sort" type="string" optional>
   sort the results by timestamp. asc will return results in ascending order
   (oldest to newest), desc will return results in descending order (newest to
-  oldest). default value is desc
+  oldest). default value is asc
 </ParamField>
 
 <ParamField query="limit" type="int" optional>
@@ -46,18 +46,12 @@ api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
     "result_count": 5000,
     "data": [
         {
-            "time": 1667822011,
-            "cost_basis_usd": 0.9995037913322449,
-            "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-            "quantity": 209.103976,
-            "value_usd": 209.00021679464672
+            "t": 1667865600,
+            "v": -0.027372016086151696
         },
         {
-            "time": 1672344420,
-            "cost_basis_usd": 1.0005964040756226,
-            "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-            "quantity": 0.582358,
-            "value_usd": 0.5827053206846714
+            "t": 1667952000,
+            "v": -0.07622440794520902
         },
         ...
     ]
