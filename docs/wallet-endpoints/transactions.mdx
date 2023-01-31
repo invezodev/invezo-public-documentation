@@ -1,0 +1,77 @@
+---
+title: "Transactions"
+description:
+  "Get all transactions with purchase price for a wallet on a given chain." 
+api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
+---
+
+### Query Parameters
+
+<ParamField query="chain" type="string" required>
+  platform to query (valid chains: eth, sol)
+</ParamField>
+
+<ParamField query="min" type="int or string" required>
+  start of the aggregate time window as a timestamp (example: 1652486400 or '2022-05-13T18:00:00')
+</ParamField>
+
+<ParamField query="max" type="int or string" optional>
+  end of the aggregate time window as a timestamp (example: 1675191600 or '2023-01-31T12:00:00')
+</ParamField>
+
+<ParamField query="interval" type="string" optional>
+  size of the time window (valid intervals: 10m, 1h, 1d, 1w, 1mo)
+</ParamField>
+
+<ParamField query="token" type="string" optional>
+  asset contract address (example: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v, 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48)
+</ParamField>
+
+<ParamField query="sort" type="string" optional>
+  sort the results by timestamp. asc will return results in ascending order
+  (oldest to newest), desc will return results in descending order (newest to
+  oldest). default value is desc
+</ParamField>
+
+<ParamField query="limit" type="int" optional>
+  limit the number of results returned, default is 5000 and max is 50000
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+"data": 
+[
+    {
+        "time": 1674536034,
+        "price_usd": 1.001,
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "quantity": 7020.0,
+        "cost_basis": 7027.0199999999995
+    },
+    {
+        "time": 1674534001,
+        "price_usd": 1.001,
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "quantity": 50.0,
+        "cost_basis": 50.05
+    },
+    {
+        "time": 1674533704,
+        "price_usd": 1.001,
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "quantity": 2470.0,
+        "cost_basis": 2472.47
+    },
+    {
+        "time": 1672344495,
+        "price_usd": 1.0005964040756226,
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "quantity": 10.0,
+        "cost_basis": 10.005964040756226
+    },
+    ...
+]
+```
+
+</ResponseExample>
