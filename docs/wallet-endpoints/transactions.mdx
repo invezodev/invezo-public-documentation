@@ -40,38 +40,28 @@ api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
 <ResponseExample>
 
 ```json Response
-"data": 
-[
-    {
-        "time": 1674536034,
-        "price_usd": 1.001,
-        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-        "quantity": 7020.0,
-        "cost_basis": 7027.0199999999995
-    },
-    {
-        "time": 1674534001,
-        "price_usd": 1.001,
-        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-        "quantity": 50.0,
-        "cost_basis": 50.05
-    },
-    {
-        "time": 1674533704,
-        "price_usd": 1.001,
-        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-        "quantity": 2470.0,
-        "cost_basis": 2472.47
-    },
-    {
-        "time": 1672344495,
-        "price_usd": 1.0005964040756226,
-        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-        "quantity": 10.0,
-        "cost_basis": 10.005964040756226
-    },
-    ...
-]
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "time": 1667822011,
+            "cost_basis_usd": 0.9995037913322449,
+            "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "quantity": 209.103976,
+            "value_usd": 209.00021679464672
+        },
+        {
+            "time": 1672344420,
+            "cost_basis_usd": 1.0005964040756226,
+            "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            "quantity": 0.582358,
+            "value_usd": 0.5827053206846714
+        },
+        ...
+    ]
+}
 ```
 
 </ResponseExample>
