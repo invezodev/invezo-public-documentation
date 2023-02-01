@@ -11,6 +11,10 @@ api: "GET https://api.invezo.com/v1/wallets/tracking/balance"
   platform to query (valid chains: eth, sol)
 </ParamField>
 
+<ParamField query="address" type="string" required>
+  wallet address (example: 0xd8da6bf26964af9d7eed9e03e53415d37aa96045)
+</ParamField>
+
 <ParamField query="min" type="int or string" required>
   start of the aggregate time window as a timestamp (example: 1652486400 or '2022-05-13T18:00:00')
 </ParamField>

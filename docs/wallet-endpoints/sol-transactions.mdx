@@ -1,17 +1,17 @@
 ---
-title: "Transactions"
+title: "SOL Transactions"
 description:
-  "Get all transactions with purchase price for a wallet on a given chain." 
-api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
+  "Get all transactions for a wallet on Solana." 
+api: "GET https://api.invezo.com/v1/wallets/tracking/solana/transactions"
 ---
 
 ### Query Parameters
 
-<ParamField query="chain" type="string" required>
-  platform to query (valid chains: eth, sol)
+<ParamField query="address" type="string" required>
+  wallet address (example: 9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM)
 </ParamField>
 
-<ParamField query="min" type="int or string" required>
+<ParamField query="min" type="int or string" optional>
   start of the aggregate time window as a timestamp (example: 1652486400 or '2022-05-13T18:00:00')
 </ParamField>
 
@@ -24,7 +24,7 @@ api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
 </ParamField>
 
 <ParamField query="token" type="string" optional>
-  asset contract address (example: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v, 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48)
+  asset contract address (example: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v)
 </ParamField>
 
 <ParamField query="sort" type="string" optional>
@@ -47,23 +47,27 @@ api: "GET https://api.invezo.com/v1/wallets/tracking/transactions"
     "data": [
         {
             "time": 1675204564,
-            "quantity": -0.002990839999999828,
+            "net_quantity": -0.002990839999999828,
+            "sent": 0.002990839999999828,
+            "received": 0.0,
+            "signature": "5QKipFdGGEkpJEjNZGZgYJVELrcVqkpFVBaFRXdWJeWYPbvXN3QAcwTxBdEgaG9ksaryH1LM3CYwbq7r5gMydhmM",
             "from": "ESeAFDVft5p7R7i1n7u75r9Bp5ESRmHwuqxE6Hz7NDuH",
             "to": null,
             "token_address": "SOL",
             "price": 23.7,
-            "amount": -0.07088290799999593,
-            "type": "sell"
+            "net_amount": -0.07088290799999593
         },
         {
             "time": 1675204119,
-            "quantity": -0.001,
+            "net_quantity": -0.001,
+            "sent": 0.001,
+            "received": 0.0,
+            "signature": "3NYiibUbdHxQjxcnHz9JdYhJ5F2j9SLgCB9TrioqSx3qV2bJPwd8ohRDo3RTZxmMo9fPa9FNnX3sEWoDXC9hybrX",
             "from": "ESeAFDVft5p7R7i1n7u75r9Bp5ESRmHwuqxE6Hz7NDuH",
             "to": "cAhiiJM1nrc3akoLoTECJPyqJNFWFkjzxYnVUok8dwu",
             "token_address": "SOL",
             "price": 23.77,
-            "amount": -0.02377,
-            "type": "sell"
+            "net_amount": -0.02377
         },
         ...
     ]
