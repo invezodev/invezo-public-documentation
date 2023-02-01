@@ -1,0 +1,85 @@
+---
+title: "ETH Transactions"
+description:
+  "Get all transactions for a wallet on Ethereum." 
+api: "GET https://api.invezo.com/v1/wallets/tracking/ethereum/transactions"
+---
+
+### Query Parameters
+
+<ParamField query="address" type="string" required>
+  wallet address (example: 0xd8da6bf26964af9d7eed9e03e53415d37aa96045)
+</ParamField>
+
+<ParamField query="min" type="int or string" optional>
+  start of the aggregate time window as a timestamp (example: 1652486400 or '2022-05-13T18:00:00')
+</ParamField>
+
+<ParamField query="max" type="int or string" optional>
+  end of the aggregate time window as a timestamp (example: 1675191600 or '2023-01-31T12:00:00')
+</ParamField>
+
+<ParamField query="interval" type="string" optional>
+  size of the time window (valid intervals: 10m, 1h, 1d, 1w, 1mo)
+</ParamField>
+
+<ParamField query="token" type="string" optional>
+  asset contract address (example: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v)
+</ParamField>
+
+<ParamField query="sort" type="string" optional>
+  sort the results by timestamp. asc will return results in ascending order
+  (oldest to newest), desc will return results in descending order (newest to
+  oldest). default value is desc
+</ParamField>
+
+<ParamField query="limit" type="int" optional>
+  limit the number of results returned, default is 5000 and max is 50000
+</ParamField>
+
+<ResponseExample>
+
+```json Response
+{
+    "status": "OK",
+    "request_id": "",
+    "result_count": 5000,
+    "data": [
+        {
+            "time": 1675146119,
+            "net_quantity": 0.0,
+            "sent": 0.0,
+            "received": 0.0,
+            "hash": "0x1cea8cd4481028ef28ff21caab4f9a20c5142f38538474c1f877696b90056566",
+            "gas_price": 15647241733.0,
+            "gas_used": 440850.0,
+            "transaction_fee_ether": 0.00689808651799305,
+            "transaction_fee_usd": 10.804886798323594,
+            "from": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+            "to": "0x2df880dbac1eb1c10c98829e59718a76d10df06a",
+            "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "price": 1.002,
+            "net_amount": 0.0
+        },
+        {
+            "time": 1675146071,
+            "net_quantity": 0.0,
+            "sent": 0.0,
+            "received": 0.0,
+            "hash": "0xf4915dda02c382d474d0e720e57ba0038cc512bb9f33993e8cccf846ce525b71",
+            "gas_price": 15772613434.0,
+            "gas_used": 755705.0,
+            "transaction_fee_ether": 0.01191944283514097,
+            "transaction_fee_usd": 18.67013847925141,
+            "from": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+            "to": "0x2df805a0faea16a3bc9472b28e7b62258fbdf06a",
+            "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "price": 1.002,
+            "net_amount": 0.0
+        },
+        ...
+    ]
+}
+```
+
+</ResponseExample>

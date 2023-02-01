@@ -8,12 +8,12 @@ api: "POST https://api.invezo.com/v1/wallets/tracking/register"
 
 ### JSON Body Parameters
 
-<ParamField query="address" type="string">
-  wallet address
-</ParamField>
-
 <ParamField query="chain" type="string">
   platform to query (valid chains: eth, sol)
+</ParamField>
+
+<ParamField query="address" type="string" required>
+  wallet address (example: 0xd8da6bf26964af9d7eed9e03e53415d37aa96045)
 </ParamField>
 
 <ResponseExample>
