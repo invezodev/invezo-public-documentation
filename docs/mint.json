@@ -165,19 +165,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "group": "Wallet Endpoints",
-            "pages": [
-                "wallet-endpoints/holdings",
-                "wallet-endpoints/eth-transactions",
-                "wallet-endpoints/sol-transactions",
-                "wallet-endpoints/balance-over-time",
-                "wallet-endpoints/token-balance-over-time",
-                "wallet-endpoints/profit-loss",
-                "wallet-endpoints/register",
-                "wallet-endpoints/delete"
-            ]
         }
     ],
     "footerSocials": {
